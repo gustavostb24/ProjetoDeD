@@ -1,6 +1,126 @@
-*{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box; 
-      font-family: 'Poppins', sans-serif;
+body{
+      background-color: black;
+      overflow: hidden; /* oculta a barra de rolagem */
+      
+
+}
+
+main::after {
+      content: ""; /* cria um pseudo-elemento após o main */
+      position: fixed; /* posição fixa do pseudo-elemento */
+      top: 0; /* alinha o pseudo-elemento ao topo */
+      left: 0; /* alinha o pseudo-elemento à esquerda */
+      
+      min-height: 100vh;
+      width: 80vw;
+    
+       background: linear-gradient(92deg, #000 25%, rgba(0, 0, 0, 0) 75%) no-repeat; /* gradiente de fundo */
+
+}
+
+main .personagem{ /* seletor da classe personagem dentro do*/
+      display: none; /* oculta o personagem */
+      height: 100vh; /* altura da tela do personagem */
+      
+      
+}
+
+main .personagem.selecionado{
+      display: block; /* exibe o personagem selecionado */
+
+}
+
+main .personagem .imagem{
+      width: 100%; /* largura da imagem do personagem */
+      height: 100%; /* altura da imagem do personagem */
+      object-fit: cover; /* ajuste da imagem do personagem */
+      
+      
+}
+
+.conteudo{
+      position: absolute; /* posição absoluta do conteúdo */
+      top: 0; /* alinha o conteúdo ao topo */   
+      left: 120px; /* alinha o conteúdo à esquerda */
+      display: flex; /* exibe o conteúdo em flexbox */
+      flex-direction: column; /* direção do conteúdo em coluna */
+      justify-content: center; /* centraliza o conteúdo verticalmente */      
+      height: 100vh; /* altura do conteúdo */
+      max-width: 380px;
+      z-index: 1;/* z-index para sobrepor outros elementos */
+}
+
+.conteudo .nome-personagem{
+      
+      color: white;
+      font-size: 48px;
+      font-family: "Secular One";
+      font-weight: 400;
+      margin-bottom: 20px;
+
+}
+
+.conteudo .descricao{
+      
+      color: white;
+      font-family: "Rubik";
+      line-height: 24px;
+      font-size: 16px;
+}
+
+.botoes{
+      background-color: rgba(0,0,0,0.3);
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 180px;
+
+      display: flex;
+      flex-direction: column; /* direção do conteúdo em coluna */
+      align-items: center;    /* centraliza o conteúdo horizontalmente */
+      justify-content: center; /* centraliza o conteúdo verticalmente */
+      min-height: 100vh; /* altura mínima do botão */
+      gap: 15px; /* espaço entre os botões */
+
+}
+ .botoes .botao{
+      border: none; /* remove a borda do botão */
+      background-color: rgba(0,0,0); /* cor de fundo do botão */
+      width: 90px;
+      height: 90px;
+      cursor: pointer; /* cursor de ponteiro ao passar o mouse */
+      transition: transform 0.3s ease; /* animação de transformação */
+      border-radius: 50%; /* borda arredondada do botão */
+ }
+ 
+ .botoes .botao img{
+      border-radius: 50%; /* borda arredondada da imagem do botão */
+
+ }
+
+ .botoes .botao.selecionado{
+      transform: scale(1.2); /* aumenta o tamanho do botão selecionado */
+      box-shadow: 0 0 10px #fffcfc /* sombra do botão selecionado */
+ }
+
+
+
+.botoes .botao.cyberstorm.selecionado{
+    box-shadow: 0 0 10px #47FFC5;
+}
+
+.botoes .botao.codepixie.selecionado{
+    box-shadow: 0 0 10px #9747FF;
+}
+
+.botoes .botao.hexblade.selecionado{
+    box-shadow: 0 0 10px #FFA947;
+}
+
+.botoes .botao.neonpulse.selecionado{
+    box-shadow: 0 0 10px #E4309A;
+}
+
+.botoes .botao.codebreaker.selecionado{
+    box-shadow: 0 0 10px #FFF047;
 }

@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+*{
+      margin: 0; /* Reseta margin */
+      padding: 0; /* Reseta padding */
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+}
+
+ul{
+      list-style: none; /* Remove os marcadores da lista */
+}
